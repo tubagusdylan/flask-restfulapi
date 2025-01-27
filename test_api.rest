@@ -1,0 +1,18 @@
+### add students
+POST http://localhost:5000/students
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "dylan",
+    "npm": "2006574521",
+    "major": "electrical engineering",
+    "faculty": "engineering",
+    "semester": "8",
+    "year_in": 2020
+}
+
+### get students
+GET http://localhost:5000/students
+Accept: application/json
+Content-Type: application/json
