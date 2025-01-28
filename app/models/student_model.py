@@ -9,6 +9,9 @@ class Mahasiswa(db.Model):
     semester = db.Column(db.String(10), nullable=False)
     year_in = db.Column(db.Integer, nullable=False)
 
+    def commit(self):
+        db.session.commit()
+
     def save(self):
         db.session.add(self)
         db.session.commit()
@@ -23,3 +26,7 @@ class Mahasiswa(db.Model):
             "semester": self.semester,
             "year_in": self.year_in
         }
+    
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()

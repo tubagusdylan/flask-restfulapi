@@ -16,3 +16,23 @@ Content-Type: application/json
 GET http://localhost:5000/students
 Accept: application/json
 Content-Type: application/json
+
+### get one student
+GET http://localhost:5000/students/4
+
+### update student
+PUT http://localhost:5000/students/7
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "dylan new",
+    "npm": "200657new",
+    "major": "electrical new",
+    "faculty": "engineering new",
+    "semester": "10",
+    "year_in": 2025
+}
+
+### delete student
+DELETE http://localhost:5000/students/0
